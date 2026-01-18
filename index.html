@@ -9,13 +9,13 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         
-        /* CORREÇÃO APLICADA: Adicionada a propriedade padrão 'background-clip' */
+        /* Configuração do Gradiente de Texto */
         .gradient-text {
             background: linear-gradient(to right, #9333ea, #c084fc); 
             -webkit-background-clip: text;
-            background-clip: text; /* Essa linha remove o aviso amarelo do editor */
+            background-clip: text;
             -webkit-text-fill-color: transparent;
-            color: transparent; /* Garante compatibilidade extra */
+            color: transparent;
         }
         
         /* Fundo com pontilhado Roxo */
@@ -54,8 +54,7 @@
                 <span class="gradient-text">Excelência e Rapidez</span>
             </h1>
             <p class="mt-4 text-xl text-slate-400 max-w-2xl mx-auto mb-10">
-                Precisa de ajuda com trabalhos escolares, faculdade ou formatação? 
-                Foque no conteúdo e deixe a estruturação e as normas ABNT comigo.
+                Sou Thamiris Rocha, treinada em formação ABNT pela PUC Minas. Corrijo seus textos avaliando gramática e coesão textual, formato seus trabalhos e produzo textos acadêmicos.
             </p>
             <div class="flex justify-center gap-4">
                 <a href="#contato" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105 shadow-lg shadow-purple-500/30">
@@ -79,13 +78,15 @@
                 <div class="bg-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-purple-500 transition duration-300">
                     <div class="text-purple-500 text-3xl mb-4">🎓</div>
                     <h3 class="text-xl font-bold text-white mb-2">Formatação ABNT</h3>
-                    <p class="text-slate-400">Deixe seu TCC, artigo ou monografia dentro das normas. Margens, citações, referências e sumários automáticos.</p>
+                    <p class="text-slate-400">Garanta a qualidade do seu trabalho! Enquadro seu TCC, artigo ou monografia nas regras da ABNT.</p>
                 </div>
+                
                 <div class="bg-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-purple-500 transition duration-300">
                     <div class="text-purple-500 text-3xl mb-4">📝</div>
                     <h3 class="text-xl font-bold text-white mb-2">Revisão e Digitação</h3>
-                    <p class="text-slate-400">Correção ortográfica, coesão textual e digitação de manuscritos ou áudios para texto.</p>
+                    <p class="text-slate-400">Correção gramatical e contextual, além da produção de textos do zero. Tiro sua escrita do amadorismo para uma linguagem técnica e acadêmica.</p>
                 </div>
+                
                 <div class="bg-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-purple-500 transition duration-300">
                     <div class="text-purple-500 text-3xl mb-4">📊</div>
                     <h3 class="text-xl font-bold text-white mb-2">Slides e Resumos</h3>
@@ -154,11 +155,11 @@
 
            
             
-            const rawMessage = `*Solicitação de Trabalho Acadêmico* ` +
-                               `\ *Nome:* ${name}\n` +
-                               `\ *Email:* ${email}\n` +
-                               `\ *Tipo de Trabalho:* ${workType ? workType : 'Não informado'}\n` +
-                               `\ *Detalhes:* ${message}`;
+            const rawMessage = `Solicitação de Trabalho Acadêmico ` +
+                               `\nNome: ${name}` +
+                               `\nEmail: ${email}` +
+                               `\nTipo de Trabalho: ${workType ? workType : 'Não informado'}` +
+                               `\n*Detalhes: ${message}`;
 
             const encodedMessage = encodeURIComponent(rawMessage);
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
